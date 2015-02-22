@@ -1,15 +1,14 @@
-
-
 #Below are two functions that are used to create a
 #special object that stores a matrix and caches its inverse.
 
 #The first function, `makeCacheMatrix` creates a list containing 4 functions to
 
-#1.  set the value of a matrix
-#2.  get the value of the matrix
-#3.  set the value of the inverse
-#4.  get the value of the inverse
-# If you feed `makeCacheMatrix' a matrix, it will `set' the matrix so that when
+#1.  set the value of a matrix: can be called later to redefine matrix
+#2.  get the value of the matrix: can ge used to calculate and cache calcs
+#3.  set the value of the inverse: saves calculated results
+#4.  get the value of the inverse: recalls inverse so it doesn't have to be 
+#calculated twice. 
+# If you feed `makeCacheMatrix' a matrix, it will assign the matrix so that when
 # `cacheSolve' runs it can `get' the matrix. 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -21,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function() x
         setinv <- function(inv) m <<- inv
         getinv <- function() m
-        list(set = set, get = get,
+        list(set=set, get = get,
              setinv = setinv,
              getinv = getinv)
 }
