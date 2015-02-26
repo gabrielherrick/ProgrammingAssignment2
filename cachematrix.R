@@ -4,7 +4,7 @@
 #The first function, `makeCacheMatrix` creates a list containing 4 functions to
 
 #1.  set the value of a matrix: can be called later to redefine matrix
-#2.  get the value of the matrix: can ge used to calculate and cache calcs
+#2.  get the value of the matrix: can be used to calculate and cache calcs
 #3.  set the value of the inverse: saves calculated results
 #4.  get the value of the inverse: recalls inverse so it doesn't have to be 
 #calculated twice. 
